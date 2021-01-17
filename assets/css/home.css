@@ -30,12 +30,14 @@
   }
   
   .drop__card{
-   /* width: 360px;*/
     justify-content: space-between;
     padding: .75rem 1.25rem .75rem .75rem;
     background-color: #F8F8FC;
     box-shadow: 4px 4px 16px #E1E1E1, -2px -2px 16px #FFF;
     margin-bottom: 20px;
+  }
+  .drop__card:hover{
+    cursor: pointer;
   }
   
   .drop__img{

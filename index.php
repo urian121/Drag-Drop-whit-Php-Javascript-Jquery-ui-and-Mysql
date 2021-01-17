@@ -1,17 +1,3 @@
-<?php
-include('config.php');
-    if (isset($_POST['update'])) {
-        foreach($_POST['positions'] as $position) {
-           $index = $position[0];
-           $newPosition = $position[1];
-
-          $UpdatePosition = ("UPDATE drag_drop SET posicion = '$newPosition' WHERE id='$index' ");
-          $result = mysqli_query($con, $UpdatePosition);
-        }
-    }
-?>
-
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -77,12 +63,12 @@ while ($dataDrag_Drop = mysqli_fetch_assoc($resultadodrag_drop)) { ?>
                     }
                });
 
-               saveNewPositions();
+               guardandoPosiciones();
            }
        });
     });
 
-    function saveNewPositions() {
+    function guardandoPosiciones() {
         var positions = [];
         $('.updated').each(function () {
            positions.push([$(this).attr('data-index'), $(this).attr('data-position')]);
@@ -90,7 +76,7 @@ while ($dataDrag_Drop = mysqli_fetch_assoc($resultadodrag_drop)) { ?>
         });
 
         $.ajax({
-           url: 'index.php',
+           url: 'ajax.php',
            method: 'POST',
            dataType: 'text',
            data: {
