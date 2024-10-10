@@ -9,9 +9,6 @@
     font-family: 'Ubuntu', sans-serif;
     background-color: #F8F8FC;
   }
-  .container{
-    box-shadow: 4px 4px 16px #E1E1E1;
-  }
   .top{
       margin-top: 80px;
   }
@@ -32,7 +29,7 @@
   .drop__card{
     justify-content: space-between;
     padding: .75rem 1.25rem .75rem .75rem;
-    background-color: #F8F8FC;
+    background-color: #fff;
     box-shadow: 4px 4px 16px #E1E1E1, -2px -2px 16px #FFF;
     margin-bottom: 20px;
   }
